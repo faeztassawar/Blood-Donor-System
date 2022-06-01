@@ -219,7 +219,8 @@ void update_data( string c )
 		k++;
 	}
 	file.close();
-	for ( int j = 0; j < k; j++ )
+	int x = k - 1;
+	for ( int j = 0; j < x; j++ )
 	{
 		if ( c == d4[j].id )
 		{
@@ -288,7 +289,8 @@ void remove_data( string d )
 	file.close();
 	ofstream temp_file;
 	temp_file.open("temp_donor_data.txt",ios::app);
-	for ( int j = 0; j < i; j++ )
+	int x = i - 1;
+	for ( int j = 0; j < x; j++ )
 	{
 		if ( d == d5[j].id )
 		{
