@@ -153,6 +153,7 @@ void search_by_name( string a )
 		file.ignore();
 	}
 	file.close();
+	int x = 0;
 	for ( int j = 0; j < size; j++ )
 	{
 		if ( a == d2[j].name )
@@ -162,9 +163,14 @@ void search_by_name( string a )
 			cout << "Blood group : " << d2[j].blood_group << endl;
 			cout << "Phone number : " << d2[j].phone_no << endl;
 			cout << "Date of donation : " << d2[j].date_of_donation << endl;						
-			cout << "Donation count : " << d2[j].donation_count << endl << endl;	
+			cout << "Donation count : " << d2[j].donation_count << endl << endl;
+			x++;	
 		}
     }
+    if ( x == 0 )
+    {
+    	cout << "No record found !" << endl << endl;
+	}
 }
 
 // Function for searching donor by blood group.
@@ -184,6 +190,7 @@ void search_by_blood_group( string b )
 		file.ignore();
 	}
 	file.close();
+	int x = 0;
 	for ( int j = 0; j < size; j++ )
 	{
 		if ( b == d3[j].blood_group )
@@ -193,9 +200,14 @@ void search_by_blood_group( string b )
 		    cout << "Blood group : " << d3[j].blood_group << endl;
 		    cout << "Phone number : " << d3[j].phone_no << endl;
 		    cout << "Date of donation : " << d3[j].date_of_donation << endl;						
-		    cout << "Donation count : " << d3[j].donation_count << endl << endl;	
+		    cout << "Donation count : " << d3[j].donation_count << endl << endl;
+			x++;	
 	    }
     }
+    if ( x == 0)
+    {
+    	cout << "No record found !" << endl << endl;
+	}
 }
 
 // Function to update the record.
